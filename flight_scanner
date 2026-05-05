@@ -9,11 +9,12 @@ import time
 # ─────────────────────────────────────────────
 #  הגדרות — מלא את הפרטים שלך כאן
 # ─────────────────────────────────────────────
-SENDER_EMAIL    = "your_email@gmail.com"
-SENDER_PASSWORD = "your_app_password"
-RECEIVER_EMAIL  = "your_email@gmail.com"
+import os
 
-SERPAPI_KEY     = "YOUR_SERPAPI_KEY"
+SENDER_EMAIL    = os.environ.get("SENDER_EMAIL")
+SENDER_PASSWORD = os.environ.get("SENDER_PASSWORD")
+RECEIVER_EMAIL  = os.environ.get("RECEIVER_EMAIL")
+SERPAPI_KEY     = os.environ.get("SERPAPI_KEY")
 
 ORIGIN          = "TLV"
 DESTINATION     = "TIA"
